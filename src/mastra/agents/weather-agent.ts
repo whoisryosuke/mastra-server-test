@@ -1,11 +1,11 @@
-import { Agent } from '@mastra/core/agent';
-import { Memory } from '@mastra/memory';
-import { weatherTool } from '../tools/weather-tool';
-import { scorers } from '../scorers/weather-scorer';
+import { Agent } from "@mastra/core/agent";
+import { Memory } from "@mastra/memory";
+import { weatherTool } from "../tools/weather-tool";
+import { scorers } from "../scorers/weather-scorer";
 
 export const weatherAgent = new Agent({
-  id: 'weather-agent',
-  name: 'Weather Agent',
+  id: "weather-agent",
+  name: "Weather Agent",
   instructions: `
       You are a helpful weather assistant that provides accurate weather information and can help planning activities based on the weather.
 
@@ -20,27 +20,30 @@ export const weatherAgent = new Agent({
 
       Use the weatherTool to fetch current weather data.
 `,
-  model: 'openai/gpt-5-mini',
+  model: {
+    id: "lmstudio/openai/gpt-oss-20b",
+    url: "http://127.0.0.1:1234/v1",
+  },
   tools: { weatherTool },
   scorers: {
     toolCallAppropriateness: {
       scorer: scorers.toolCallAppropriatenessScorer,
       sampling: {
-        type: 'ratio',
+        type: "ratio",
         rate: 1,
       },
     },
     completeness: {
       scorer: scorers.completenessScorer,
       sampling: {
-        type: 'ratio',
+        type: "ratio",
         rate: 1,
       },
     },
     translation: {
       scorer: scorers.translationScorer,
       sampling: {
-        type: 'ratio',
+        type: "ratio",
         rate: 1,
       },
     },
