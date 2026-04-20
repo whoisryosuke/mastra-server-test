@@ -21,6 +21,7 @@
     "@mastra/loggers": "^1.1.1",
     "@mastra/memory": "^1.15.1",
     "@mastra/observability": "^1.9.1",
+    "tonal": "^6.4.3",
     "zod": "4"
   },
   "devDependencies": {
