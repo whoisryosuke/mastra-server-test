@@ -690,6 +690,11 @@
   dependencies:
     "@lukeed/csprng" "^1.1.0"
 
+"@mastra/ai-sdk@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mastra/ai-sdk/-/ai-sdk-1.4.0.tgz#eb79de0d94ac26b1e476b280d4a3a83c89f81d86"
+  integrity sha512-+5TiUZfOi4XnlE3+bChlX27vA1YcKC4rfJERQIhXS7f9c4k5Wly+Rwz2RIioXfEttrBgykUp5hG93YSmETzYxA==
+
 "@mastra/core@^1.25.0":
   version "1.25.0"
   resolved "https://registry.yarnpkg.com/@mastra/core/-/core-1.25.0.tgz#c738823fb1e4fe44760896dbf9e31fcb0440bfbe"

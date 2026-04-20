@@ -13,6 +13,7 @@
     "start": "mastra start"
   },
   "dependencies": {
+    "@mastra/ai-sdk": "^1.4.0",
     "@mastra/core": "^1.25.0",
     "@mastra/duckdb": "^1.1.2",
     "@mastra/evals": "^1.2.1",
