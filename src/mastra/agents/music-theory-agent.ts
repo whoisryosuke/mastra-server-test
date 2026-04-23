@@ -38,7 +38,7 @@ export const musicTheoryAgent = new Agent({
       - chordTransposeTool: Transpose a chord by an interval
   `,
   model: {
-    id: "lmstudio/openai/gpt-oss-20b",
+    id: "lmstudio/qwen/qwen3-coder-30b",
     url: "http://127.0.0.1:1234/v1",
   },
   tools: {

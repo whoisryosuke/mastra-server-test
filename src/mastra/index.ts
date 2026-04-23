@@ -12,6 +12,8 @@ import {
 import { weatherWorkflow } from "./workflows/weather-workflow";
 import { weatherAgent } from "./agents/weather-agent";
 import { musicTheoryAgent } from "./agents/music-theory-agent";
+import { musicGenerationAgent } from "./agents/music-generation-agent";
+import { musicGenerationTool } from "./tools/music-generation-tool";
 import {
   toolCallAppropriatenessScorer,
   completenessScorer,
@@ -28,7 +30,8 @@ export const mastra = new Mastra({
     ],
   },
   workflows: { weatherWorkflow },
-  agents: { weatherAgent, musicTheoryAgent },
+  agents: { weatherAgent, musicTheoryAgent, musicGenerationAgent },
+  tools: { musicGenerationTool },
   scorers: {
     toolCallAppropriatenessScorer,
     completenessScorer,
